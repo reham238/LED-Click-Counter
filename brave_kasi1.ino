@@ -1,5 +1,3 @@
-// C++ code
-//
 int counter=0;
 int reading;
 
@@ -23,19 +21,23 @@ reading=digitalRead(7);
   
   if(counter==1)
   {digitalWrite(6,1);}
-  else
-  {digitalWrite(6,0);}
-    delay(250);
-  if(counter==2)
-  {digitalWrite(5,1);}
-  else
-  {digitalWrite(5,0);}
-    delay(250);
-  if(counter==3)
-  {digitalWrite(4,1);}
-  else
-  {digitalWrite(4,0);}
-
+  else if(counter==2)
+  {
+    digitalWrite(5,1);
+    digitalWrite(6,0);
+  
+  }
+  else if(counter==3)
+  {
+    digitalWrite(4,1);
+    digitalWrite(5,0);
+  }
+  else if(counter==4)
+  {
+    digitalWrite(4,0);
+    counter=0;
+  }
+   
     delay(250);
   }
 
